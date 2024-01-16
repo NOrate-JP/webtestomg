@@ -2,7 +2,7 @@ Q.よいしょだね よよいよよいしょ □□□□□□□
 
 <div class="code">
 <div class="center">
-<form name="frmAngoukaJump" action="javascript:DecodeJump();"><input name="txtPasswordForDecode" type="text" size="30" id="inp_val" placeholder="ひらがなで入力"/> <input name="btnMD5" onclick="DecodeJump();" type="button" readonly="readonly" value="解答" /></form>
+<form name="frmAngoukaJump" action="javascript:DecodeJump();"><input name="txtPasswordForDecode" type="text" size="30" id="inp_val" placeholder="ひらがなor数字で入力"/> <input name="btnMD5" onclick="DecodeJump();" type="button" readonly="readonly" value="解答" /></form>
 </div>
 
 <script>// <![CDATA[
@@ -11,7 +11,7 @@ function DecodeJump(){
   //ここに暗号化URLをコピーして下さい▽▽▽▽▽▽▽▽▽
   cURL[0] = "12512,12336,12323,12535,12304,12397,12456,12455,12330,12344,12533,12290,12323,12514,12453,12334,12327,12457,12292,12350,12531,12512,12337,12341,12457,12298,12344,12456,12543,12321,12341,12531,12294,12324,12531,12519,12329,12336,12456,12304,12322,12516,12523,12321,12324,12532,12365,12351,12531,12517,12328";
   cURL[1] = "91,77,77,73,68,15,30,26,94,87,66,83,64,85,28,90,73,24,95,81,71,94,65,87,28,91,89,28,79,80,80,66,86,68,65,90,94,94,22,92,79,86,93,80,81,74,30,90,64,93,93";
-  cURL[2] = "12330,12541,12424,12312,12408,12454,12499,12319,12341,12542,12498,12315,12330,12512,12427,12301,12330,12512,12498,12299,12333,12516,12499,12299,12333,12517,12425,12293,12332,12455,12428,12288,12338";
+  cURL[2] = "12302";
   //ここに暗号化URLをコピーして下さい△△△△△△△△△
   var KeyWord;
   KeyWord = document.frmAngoukaJump.txtPasswordForDecode.value;
@@ -28,9 +28,9 @@ function DecodeJump(){
     } else if (str[1].match(re)) {
       document.location.href = str[1] ;//cURL[1]に設定された文字列が入力されたらcURL[1]に設定されたURLに遷移する
     } else if (str[2].match(re)) {
-      alert("「あらーと」が入力されました。");//cURL[2]に設定された文字列が入力されたらアラートを出す。
+      alert("ダメだけどね");//cURL[2]に設定された文字列が入力されたらアラートを出す。
     }else{
-      alert("不正解です。");//cURLに設定されていない単語が入力された。
+      alert("不正解でござい");//cURLに設定されていない単語が入力された。
     }
 }
 
